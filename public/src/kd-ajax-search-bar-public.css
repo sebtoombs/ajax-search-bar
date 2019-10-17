@@ -1,0 +1,67 @@
+/*@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+
+@import "tailwindcss/utilities";*/
+
+.kd-ajax-search-bar {
+  @apply relative;/* bg-gray-200 p-3;*/
+
+  .kdasb-container {
+    @apply relative;
+    @screen sm { max-width: 640px; }
+    @screen md { max-width: 768px; }
+    @screen lg { max-width: 1024px; }
+    @screen xl { max-width: 1280px; }
+
+  }
+
+
+  .kdasb-form {
+    @apply relative flex items-center mx-auto;
+    max-width: 600px;
+
+    .kdasb-form-group {
+      flex-grow: 1;
+      .kdasb-sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
+      }
+
+      .kdasb-search-field {
+        @apply border border-gray-600 rounded-none bg-white text-black block w-full px-3 py-2;
+        font-size: 16px;
+      }
+    }
+
+    .kdasb-button {
+      @apply border border-gray-600 bg-gray-600 text-white block px-6 py-2;
+      font-size: 16px;
+    }
+
+
+    .kdasb-search-form-results-ajax {
+      @apply absolute w-full bg-white shadow-lg;
+      z-index: 9999;
+      top: 100%;
+
+      .kdasb-result-item {
+        border-bottom: 1px solid;
+        @apply flex items-center py-4 px-5 border-b border-gray-300;
+
+        .kdasb-result-thumbnail {
+
+        }
+      }
+    }
+
+  }
+
+
+}
